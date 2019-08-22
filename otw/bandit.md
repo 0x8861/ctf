@@ -190,12 +190,8 @@ $ ./bandit20-do cat /etc/bandit_pass/bandit20
 ```shell
 $ ssh -p 2220 bandit20@bandit.labs.overthewire.org
 # password: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-$ nc -l -p 8861 localhost &
-$ ./suconnect 8861 &
-$ jobs
-$ fg 1
-# paste the current level password here
-# the next level's password will be sent back
+$ cat /etc/bandit_pass/bandit20 | nc -lp 8861 &
+$ ./suconnect 8861
 ```
 
 ### 22. Level 21 -> 22
